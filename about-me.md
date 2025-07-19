@@ -33,5 +33,5 @@ Resume
 * UNBLOCKATHON 2019 - [Top 5 finalist](https://www.facebook.com/unblockathon/videos/2435987153303018/?t=75)
   * Participated with a project named "Freshlytics", an AI-powered smart agriculture application that helps the farmers to reduce lost of produce
   * Web application designer for the project
-* UTM Grand Challenges Competition 2019 - [1st Prize](https://engineering.utm.my/innovationday2019/grandchallenges/)
+* UTM Grand Challenges Competition 2019 - [1st Prize](https://www.facebook.com/photo/?fbid=1652475211554556&set=a.1652474931554584)
   * Grand Prize (Sustainable Cities and Communities)
