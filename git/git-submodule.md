@@ -1,0 +1,33 @@
+# Git submodule
+
+## To add submodule
+
+```
+$ git submodule add <remote_url> <destination_folder>
+```
+
+* please note that you have to give the full path including the name of folder of the submodule for \<destination\_folder>&#x20;
+* &#x20;\<destination\_folder> is equivalent to \<existing\_folder>/\<submodule\_folder>&#x20;
+* by default without \<destination\_folder>, the submodule folder would be created on the current directory
+
+## To delete submodule
+
+```
+$ git submodule deinit <path_to_submodule>
+Delete the section referring to the submodule from the .gitmodules file
+$ git add .gitmodules (to stage changes)
+$ git rm --cached <path_to_submodule> (no trailing slash)
+$ rm -rf .git/modules/<path_to_submodule>
+$ git commit -m "Removed submodule"
+$ rm -rf <path_to_submodule>
+```
+
+## To update submodule
+
+```
+$  git submodule update --init --recursive
+```
+
+## References
+
+1. [https://forum.freecodecamp.org/t/how-to-remove-a-submodule-in-git/13228](https://forum.freecodecamp.org/t/how-to-remove-a-submodule-in-git/13228)
