@@ -5,6 +5,7 @@
 ```
 $ sudo docker build . -t <reponame>:<tagname> -f <Dockerfile>
 ```
+> **Note:** Use --no-cache if you would like to force rebuilding
 
 ## Running inside docker container
 
