@@ -45,7 +45,7 @@ $ sudo nano /etc/logrotate.d/rsyslog
 * Restart the service
 
 ```
-$sudo systemctl restart rsyslog.service
+$ sudo systemctl restart rsyslog.service
 ```
 
 * Sometimes, the error message from ROS may generate big size of log as well.

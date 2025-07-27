@@ -4,13 +4,13 @@
 * [About Me](about-me.md)
 
 ## Linux
-
 * [Basic commands](linux/basic-commands.md)
-* [Controller Area Network (CAN)](linux/controller-area-network-can.md)
 * [Disk](linux/disk.md)
-* [Ethernet](linux/ethernet.md)
 * [Systemd Service](linux/systemd-service.md)
 * [SSH](linux/ssh.md)
+* Peripheral
+  * [Controller Area Network (CAN)](linux/peripheral/controller-area-network-can.md)
+  * [Ethernet](linux/peripheral/ethernet.md)
 
 ## Microcontroller / Single Board Computer
 
