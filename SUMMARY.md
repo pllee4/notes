@@ -8,7 +8,7 @@
 * [Disk](linux/disk.md)
 * [Systemd Service](linux/systemd-service.md)
 * [SSH](linux/ssh.md)
-* [Peripheral](linux/peripheral/README.md)
+* Peripheral
   * [Controller Area Network (CAN)](linux/peripheral/controller-area-network-can.md)
   * [Ethernet](linux/peripheral/ethernet.md)
 
