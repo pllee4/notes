@@ -67,5 +67,5 @@ $ git clone git@github.com-account2:<your_username>/<your_repo>.git
 
 ## References
 
-1. https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
-2. https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh\_keymanagement
+1. [https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+2. [https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh\_keymanagement](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh\_keymanagement)
