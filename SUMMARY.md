@@ -12,15 +12,13 @@
   * [Controller Area Network (CAN)](linux/peripheral/controller-area-network-can.md)
   * [Ethernet](linux/peripheral/ethernet.md)
 
-## Microcontroller / Single Board Computer
-
-* [Debugger / Compiler](microcontroller-single-board-computer/debugger-compiler.md)
-* [Raspberry Pi 4](microcontroller-single-board-computer/raspberry-pi-4.md)
-
 ## Application Platform
 
 * [Docker](application-platform/docker.md)
 * [Docker Compose](application-platform/docker-compose.md)
+
+## Programming CheatSheet
+* [Python](programming-cheatsheet/python.md)
 
 ## Application Notes
 
@@ -34,6 +32,11 @@
 * [Create SSH Keys](git/create-ssh-keys.md)
 * [Git submodule](git/git-submodule.md)
 
+## Microcontroller / Single Board Computer
+
+* [Debugger / Compiler](microcontroller-single-board-computer/debugger-compiler.md)
+* [Raspberry Pi 4](microcontroller-single-board-computer/raspberry-pi-4.md)
+  
 ## VPN
 
 * [Wireguard Setup on Azure](vpn/wireguard-setup-on-azure.md)
