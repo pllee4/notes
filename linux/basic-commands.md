@@ -12,6 +12,7 @@ $ df -lh
 
 ```
 $ du -sh /directory
+$ du -sh */ | sort -hr # sort by size
 ```
 
 ## Potential disk size overflow
