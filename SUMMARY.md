@@ -17,6 +17,9 @@
 * [Docker](application-platform/docker.md)
 * [Docker Compose](application-platform/docker-compose.md)
 
+## Don't Do This
+* [C++ Don'ts](dont_do_this/C++/cpp_donts.md)
+
 ## Programming CheatSheet
 * [Python](programming-cheatsheet/python.md)
 * [Tabulation Script](programming-cheatsheet/tabulation-script.md)
