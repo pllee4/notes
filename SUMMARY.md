@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to my technical notes](README.md)
+* [Welcome to my technical notes](welcome-page.md)
 * [About Me](about-me.md)
 
 ## Linux
