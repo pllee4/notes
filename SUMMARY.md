@@ -35,6 +35,7 @@
 
 * [Create SSH Keys](git/create-ssh-keys.md)
 * [Git submodule](git/git-submodule.md)
+* [Git patch](git/git-patch.md)
 
 ## Microcontroller / Single Board Computer
 
