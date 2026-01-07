@@ -3,6 +3,7 @@
   - [Iterator Invalidation](#iterator-invalidation)
 - [Bad Practice](#bad-practice)
   - [Disable Return Value Optimization (RVO or Named RVO)](#disable-return-value-optimization-rvo-or-named-rvo)
+  - [Calling Virtual Functions during Construction or Destruction](#calling-virtual-functions-during-construction-or-destruction)
 
 ## Undefine Behaviour
 
@@ -86,4 +87,41 @@ Object SomeFunction()
     {
         return object2;
     }
+```
+
+# Calling Virtual Functions during Construction or Destruction
+
+[source: Item 9: Effective C++](https://www.amazon.sg/dp/0321334876)
+* During base class construction, virtual functions never go down into derived classes.
+
+```cpp
+class Transaction { // Base class
+public:
+    Transaction() {
+        logTransaction(); // This is the dangerous call in the constructor.
+    }
+    virtual void logTransaction() const {
+        std::cout << "Logged a base Transaction." << std::endl;
+    }
+};
+
+class BuyTransaction : public Transaction { // Derived class
+public:
+    virtual void logTransaction() const override {
+        std::cout << "Logged a Buy Transaction." << std::endl;
+    }
+};
+
+class SellTransaction : public Transaction { // Derived class
+public:
+    virtual void logTransaction() const override {
+        std::cout << "Logged a Sell Transaction." << std::endl;
+    }
+};
+
+int main() {
+    // output as "Logged a base Transaction"
+    BuyTransaction b;
+    SellTransaction c;
+}
 ```
