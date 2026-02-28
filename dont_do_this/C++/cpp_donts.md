@@ -1,11 +1,12 @@
-- [Undefine Behaviour](#undefine-behaviour)
+- [Undefined Behaviour](#undefined-behaviour)
   - [return for \[\[noreturn\]\]](#return-for-noreturn)
   - [Iterator Invalidation](#iterator-invalidation)
 - [Bad Practice](#bad-practice)
   - [Disable Return Value Optimization (RVO or Named RVO)](#disable-return-value-optimization-rvo-or-named-rvo)
   - [Calling Virtual Functions during Construction or Destruction](#calling-virtual-functions-during-construction-or-destruction)
+  - [std::move on const object](#std-move-on-const-object)
 
-## Undefine Behaviour
+## Undefined Behaviour
 
 ### return for [[noreturn]]
 
@@ -89,7 +90,7 @@ Object SomeFunction()
     }
 ```
 
-# Calling Virtual Functions during Construction or Destruction
+### Calling Virtual Functions during Construction or Destruction
 
 [source: Item 9: Effective C++](https://www.amazon.sg/dp/0321334876)
 * During base class construction, virtual functions never go down into derived classes.
@@ -123,5 +124,27 @@ int main() {
     // output as "Logged a base Transaction"
     BuyTransaction b;
     SellTransaction c;
+}
+```
+
+### std::move on const object
+
+```
+const std::string str = "data";
+auto moved = std::move(str);  // Copies, not moves
+
+// Good
+std::string str = "data";
+auto moved = std::move(str);  // Actually moves
+```
+
+```
+// This function can only copy, never move
+void process(const std::string& str) {
+    std::string local = std::move(str);  // Always copies
+}
+
+void process(std::string&& str) {
+    std::string local = std::move(str);  // Moves
 }
 ```
