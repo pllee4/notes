@@ -1,6 +1,4 @@
-
 # HTML Image Gallery Generator
-
 * This script generates an HTML table displaying images from multiple case directories.
 * Each row represents a case, and each column represents a different image suffix.
 
@@ -13,7 +11,6 @@ SUFFIXES = [
     "yourSuffix2.png",
 ]
 
-
 def find_image(case_dir, prefix, suffix):
     filename = f"{prefix}{suffix}"
     filepath = os.path.join(case_dir, filename)
@@ -23,7 +20,6 @@ def find_image(case_dir, prefix, suffix):
         return f"./{os.path.basename(case_dir)}/{filename}"
     else:
         return None
-
 
 def generate_html(result_dir, case_dirs):
     html = []
@@ -51,20 +47,22 @@ def generate_html(result_dir, case_dirs):
         # Infer prefix by scanning for first file with '_yourSuffix.png', '_yourSuffix2.png', etc.
         # Usually prefix is the base name before first _
         found_prefix = None
-        for fn in os.listdir(case_dir):
-            for suffix in SUFFIXES:
+        files = os.listdir(case_dir)
+        prefix_for_suffix = {}
+        for suffix in SUFFIXES:
+            for fn in files:
                 if fn.endswith(suffix):
-                    found_prefix = fn[: -len("" + suffix)]
+                    possible_prefix = fn[:-len('_' + suffix)]
+                    prefix_for_suffix[suffix] = possible_prefix
                     break
-            if found_prefix:
-                break
 
-        if not found_prefix:
+        if not prefix_for_suffix:
             continue  # skip cases with no matching files
 
         row = [f"<td>{case_name}</td>"]
         for suffix in SUFFIXES:
-            img_path = find_image(case_dir, found_prefix, suffix)
+            prefix = prefix_for_suffix.get(suffix, None)
+            img_path = find_image(case_dir, prefix, suffix) if prefix else None
             if img_path:
                 cell = (
                     f'<a href="{img_path}">' f'<img src="{img_path}" width="420"></a>'
