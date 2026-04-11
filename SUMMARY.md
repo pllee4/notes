@@ -11,6 +11,7 @@
 * Peripheral
   * [Controller Area Network (CAN)](linux/peripheral/controller-area-network-can.md)
   * [Ethernet](linux/peripheral/ethernet.md)
+* [GDB](linux/gdb.md)
 
 ## Application Platform
 
