@@ -29,3 +29,41 @@ print(vector.x, vector.y)
 ```
 Vector = namedtuple("Vector", ["x", "y"])
 ```
+
+## Walrus operator
+* Error if is evaluated first
+```
+>>> results = [(value := slow(num)) for num in numbers if value > 0]
+NameError: name 'value' is not defined
+```
+
+* Fix
+```
+results = [value for num in numbers if (value := slow(num)) > 0]
+```
+
+## Variable Positional Argument
+[Item 22: Reduce Visual Noise with Variable Positional Arguments](https://www.amazon.sg/dp/0134853989)
+
+```
+def log(message, values):
+    if not values:
+        print(message)
+    else:
+        values_str = ', '.join(str(x) for x in values)
+        print(f'{message}: {values_str}')
+log('My numbers are', [1, 2])
+log('Hi there', [])
+
+def log(message, *values):
+    if not values:
+        print(message)
+    else:
+        values_str = ', '.join(str(x) for x in values)
+        print(f'{message}: {values_str}')
+log('My numbers are', 1, 2)
+log('Hi there') # Much better
+```
+
+* only for situations where you know
+the number of inputs in the argument list will be reasonably small.
