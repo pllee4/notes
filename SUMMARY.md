@@ -20,6 +20,7 @@
 
 ## Don't Do This
 * [C++ Don'ts](dont_do_this/C++/cpp_donts.md)
+* [Python Don'ts](dont_do_this/Python/python_donts.md)
 
 ## Programming CheatSheet
 * [Python](programming-cheatsheet/python.md)
