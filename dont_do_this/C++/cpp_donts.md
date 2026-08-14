@@ -4,7 +4,9 @@
 - [Bad Practice](#bad-practice)
   - [Disable Return Value Optimization (RVO or Named RVO)](#disable-return-value-optimization-rvo-or-named-rvo)
   - [Calling Virtual Functions during Construction or Destruction](#calling-virtual-functions-during-construction-or-destruction)
-  - [std::move on const object](#std-move-on-const-object)
+  - [std::move on const object](#stdmove-on-const-object)
+- [Unexpected Behaviour](#unexpected-behaviour)
+  - [silent precision loss due to mantissa bits](#silent-precision-loss-due-to-mantissa-bits)
 
 ## Undefined Behaviour
 
@@ -147,4 +149,16 @@ void process(const std::string& str) {
 void process(std::string&& str) {
     std::string local = std::move(str);  // Moves
 }
+```
+
+## Unexpected Behaviour
+
+### silent precision loss due to mantissa bits
+
+```cpp
+uint32_t wrong = static_cast<uint32_t>(0.03f * 1000.0); // become 29
+uint32_t correct = static_cast<uint32_t>(0.03 * 1000.0); // become 30 as treated as double
+uint32_t manual = static_cast<uint32_t>(((0.03f * 1000.0) + 0.5f)); // become 30
+uint32_t std_round = static_cast<uint32_t>(std::round((0.03f * 1000.0))); // become 30
+// static_cast<int>(0.05f * 1000.0); // would be 50
 ```
