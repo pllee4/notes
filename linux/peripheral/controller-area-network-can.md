@@ -64,3 +64,16 @@ $ candump can0,123:1fffffff
 ```
 $ candump can0,123:1ffffff0
 ```
+
+## Recording of CAN data
+
+```
+$ candump -L can0 > can.log
+```
+
+## Playing of CAN data
+
+```
+$ canplayer -I can.log
+```
+

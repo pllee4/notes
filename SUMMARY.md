@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to my technical notes](README.md)
+* [Welcome to my technical notes](welcome-page.md)
 * [About Me](about-me.md)
 
 ## Linux
@@ -11,6 +11,7 @@
 * Peripheral
   * [Controller Area Network (CAN)](linux/peripheral/controller-area-network-can.md)
   * [Ethernet](linux/peripheral/ethernet.md)
+* [GDB](linux/gdb.md)
 
 ## Application Platform
 
@@ -19,6 +20,7 @@
 
 ## Don't Do This
 * [C++ Don'ts](dont_do_this/C++/cpp_donts.md)
+* [Python Don'ts](dont_do_this/Python/python_donts.md)
 
 ## Programming CheatSheet
 * [Python](programming-cheatsheet/python.md)
@@ -35,6 +37,7 @@
 
 * [Create SSH Keys](git/create-ssh-keys.md)
 * [Git submodule](git/git-submodule.md)
+* [Git patch](git/git-patch.md)
 
 ## Microcontroller / Single Board Computer
 
