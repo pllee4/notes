@@ -9,7 +9,7 @@
 
 
 
-{% file src=".gitbook/assets/Resume(LeePinLoon-2025)-Public.pdf" %}
+{% file src=".gitbook/assets/Resume_Lee_Pin_Loon_2026_Public.pdf" %}
 Resume
 {% endfile %}
 
